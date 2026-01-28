@@ -186,12 +186,12 @@ export const helpGuideMetaDataList = [
         ],
         descriptions: {
             ko: [
-                '1. 블로그 이미지, 동영상, 업로드 파일은 velogit/public/images, velogit/public/videos, velogit/public/uploads 폴더에 업로드하세요. 자동화 스크립트는 scripts 폴더에 있습니다. velogit에 업로드되는 포스트는 posts 폴더에 저장됩니다. system 폴더는 테마 변경 외 수정하지 마세요.',
-                '2. 블로그 배경음악은 velogit/src/audio/에 추가하세요. 블로그 헤더 메타데이터는 data/home.ts, About 페이지는 pages/about/AboutPage.tsx에서 수정할 수 있습니다. 나머지 파일은 수정하지 마세요.',
+                '1. 블로그 이미지, 동영상, 업로드 파일은 letyuchan/public/images, letyuchan/public/videos, letyuchan/public/uploads 폴더에 업로드하세요. 자동화 스크립트는 scripts 폴더에 있습니다. letyuchan에 업로드되는 포스트는 posts 폴더에 저장됩니다. system 폴더는 테마 변경 외 수정하지 마세요.',
+                '2. 블로그 배경음악은 letyuchan/src/audio/에 추가하세요. 블로그 헤더 메타데이터는 data/home.ts, About 페이지는 pages/about/AboutPage.tsx에서 수정할 수 있습니다. 나머지 파일은 수정하지 마세요.',
             ],
             en: [
-                '1. Upload your blog images, videos, and files to velogit/public/images, velogit/public/videos, and velogit/public/uploads. Automation scripts are in the scripts folder. Posts uploaded to Velogit are stored in the posts folder. Do not modify the system folder except for theme changes.',
-                '2. Add blog background music to velogit/src/audio/. You may edit the blog header metadata in data/home.ts and the About page in pages/about/AboutPage.tsx. Do not edit other files.',
+                '1. Upload your blog images, videos, and files to letyuchan/public/images, letyuchan/public/videos, and letyuchan/public/uploads. Automation scripts are in the scripts folder. Posts uploaded to letyuchan are stored in the posts folder. Do not modify the system folder except for theme changes.',
+                '2. Add blog background music to letyuchan/src/audio/. You may edit the blog header metadata in data/home.ts and the About page in pages/about/AboutPage.tsx. Do not edit other files.',
             ],
         },
     },
@@ -203,11 +203,11 @@ export const helpGuideMetaDataList = [
         ],
         descriptions: {
             ko: [
-                '1. 블로그 헤더를 커스터마이징하려면 velogit/src/data/home.ts로 이동하세요.',
+                '1. 블로그 헤더를 커스터마이징하려면 letyuchan/src/data/home.ts로 이동하세요.',
                 '2. home.ts에서 profileImgPath, blogOwnerDesc, blogDesc 값을 원하는 대로 수정하세요.',
             ],
             en: [
-                '1. To customize the blog header, go to velogit/src/data/home.ts.',
+                '1. To customize the blog header, go to letyuchan/src/data/home.ts.',
                 '2. In home.ts, edit the values of profileImgPath, blogOwnerDesc, and blogDesc to your preference.',
             ],
         },
@@ -220,11 +220,11 @@ export const helpGuideMetaDataList = [
         ],
         descriptions: {
             ko: [
-                '1. 블로그 커스텀 테마와 색상을 설정하려면 velogit/public/system/themes 폴더의 custom.png, custom-header.png 파일을 교체하세요. 헤더 이미지는 21:9 비율을 추천하며, 중앙에는 복잡한 요소가 없는 것이 좋습니다.',
+                '1. 블로그 커스텀 테마와 색상을 설정하려면 letyuchan/public/system/themes 폴더의 custom.png, custom-header.png 파일을 교체하세요. 헤더 이미지는 21:9 비율을 추천하며, 중앙에는 복잡한 요소가 없는 것이 좋습니다.',
                 '2. 블로그 색상을 변경하려면 src/index.css의 .theme-custom 부분을 수정하세요. 색상 네이밍과 구조는 변경하지 말고 값만 수정하세요. 색상 추천은 ChatGPT 등에게 문의하는 것을 권장합니다.',
             ],
             en: [
-                '1. To set a custom theme and colors for your blog, replace the files in velogit/public/system/themes with your own images named custom.png and custom-header.png. For the header, a 21:9 ratio is recommended, and it’s best to avoid complex elements in the center of the image.',
+                '1. To set a custom theme and colors for your blog, replace the files in letyuchan/public/system/themes with your own images named custom.png and custom-header.png. For the header, a 21:9 ratio is recommended, and it’s best to avoid complex elements in the center of the image.',
                 '2. To customize your blog’s colors, edit the .theme-custom section in src/index.css. Do not change the color naming or structure—only modify the color values. We recommend consulting ChatGPT or similar tools for color suggestions.',
             ],
         },
@@ -237,12 +237,12 @@ export const helpGuideMetaDataList = [
         ],
         descriptions: {
             ko: [
-                '1. 블로그 배경음악을 설정하려면 velogit/src/audio 폴더에 음원 파일을 넣으세요.',
-                '2. velogit은 합법적이고 비상업적 무료 음원 사용을 권장하며, 저작권 위반 시 개발자는 책임지지 않습니다. 상업적 허가가 필요한 음원을 사용하려면 정당하게 구매 후 허가를 받아야 하며, src/components/common/layout/footer.tsx의 저작권 표시(<p> 태그)를 복사해 알맞게 수정하세요.',
+                '1. 블로그 배경음악을 설정하려면 letyuchan/src/audio 폴더에 음원 파일을 넣으세요.',
+                '2. letyuchan은 합법적이고 비상업적 무료 음원 사용을 권장하며, 저작권 위반 시 개발자는 책임지지 않습니다. 상업적 허가가 필요한 음원을 사용하려면 정당하게 구매 후 허가를 받아야 하며, src/components/common/layout/footer.tsx의 저작권 표시(<p> 태그)를 복사해 알맞게 수정하세요.',
             ],
             en: [
-                '1. To set background music for your blog, place your audio file(s) in the velogit/src/audio folder.',
-                '2. Velogit recommends using legal, licensed, and non-commercial free music. The Velogit developer is not responsible for any copyright violations. If you wish to use music that requires a commercial license, you must first make a legitimate purchase and obtain permission. Then, copy the copyright notice section (<p> tag) from src/components/common/layout/footer.tsx and insert the appropriate attribution text.',
+                '1. To set background music for your blog, place your audio file(s) in the letyuchan/src/audio folder.',
+                '2. letyuchan recommends using legal, licensed, and non-commercial free music. The letyuchan developer is not responsible for any copyright violations. If you wish to use music that requires a commercial license, you must first make a legitimate purchase and obtain permission. Then, copy the copyright notice section (<p> tag) from src/components/common/layout/footer.tsx and insert the appropriate attribution text.',
             ],
         },
     },
@@ -254,11 +254,11 @@ export const helpGuideMetaDataList = [
         ],
         descriptions: {
             ko: [
-                '1. About 페이지는 자기소개를 적는 공간입니다. 수정하려면 velogit/src/pages/AboutPage.tsx로 이동하세요.',
+                '1. About 페이지는 자기소개를 적는 공간입니다. 수정하려면 letyuchan/src/pages/AboutPage.tsx로 이동하세요.',
                 '2. 현재 디자인은 제작자 스타일이지만, 자유롭게 커스터마이징 가능합니다. 최상위 <main> 태그의 CSS는 수정하지 않는 것을 권장합니다.',
             ],
             en: [
-                '1. The About page is where you can share information about yourself. To edit this page, go to velogit/src/pages/AboutPage.tsx.',
+                '1. The About page is where you can share information about yourself. To edit this page, go to letyuchan/src/pages/AboutPage.tsx.',
                 '2. The current design reflects the creator’s style, but you are free to customize it to your liking. It is recommended not to modify the CSS of the top-level parent <main> tag.',
             ],
         },
@@ -288,11 +288,11 @@ export const helpGuideMetaDataList = [
         ],
         descriptions: {
             ko: [
-                '1. 푸터에는 라이트/다크 모드 토글, 테마 선택, 스트레칭 설정, 배경음악 컨트롤러, velogit GitHub 이동, 제작자 연락처, 도움말 모달 열기 기능이 있습니다.',
+                '1. 푸터에는 라이트/다크 모드 토글, 테마 선택, 스트레칭 설정, 배경음악 컨트롤러, letyuchan GitHub 이동, 제작자 연락처, 도움말 모달 열기 기능이 있습니다.',
                 '2. 스트레칭 모달은 개발자의 자세 개선을 돕기 위해 스트레칭을 유도합니다. 스트레칭 시간과 알림 간격을 설정할 수 있으며, On 표시 시 활성, Off 표시 시 비활성입니다.',
             ],
             en: [
-                '1. The Footer section contains a light/dark mode toggle button, a theme selection button, a stretching settings button, a blog background music controller, a link to the Velogit GitHub repository, a creator contact function, and a help modal trigger.',
+                '1. The Footer section contains a light/dark mode toggle button, a theme selection button, a stretching settings button, a blog background music controller, a link to the letyuchan GitHub repository, a creator contact function, and a help modal trigger.',
                 '2. The Stretching modal helps developers improve posture by encouraging regular stretching. You can set the stretch duration and reminder interval. “On” means active; “Off” means inactive.',
             ],
         },
@@ -323,11 +323,11 @@ export const helpGuideMetaDataList = [
         descriptions: {
             ko: [
                 '1. 한국어 교정 서비스를 이용하기 위해서는 우선 도커를 설치해주세요. 도커 설치를 위해서 mac 유저는 `brew install --cask docker` 명령어를 터미널에서 실행하는 걸 권장합니다. 윈도우 유저는 공식사이트(https://www.docker.com/get-started/)에서 다운로드받아주세요. 설치가 완료되면 다음 명령어로 Docker가 정상 설치되었는지 확인하세요: `docker -v`, `docker run hello-world`.',
-                '2. 포크 후 최초 이용시에는 `docker compose up --build -d server` 해당 명령어를 먼저 실행 후 이미지 빌드가 완료되면, `pnpm run dev` 명령어를 실행하여 velogit을 이용하시면 됩니다. 이미지 빌드시 다소 시간이 소요될 수 있습니다.',
+                '2. 포크 후 최초 이용시에는 `docker compose up --build -d server` 해당 명령어를 먼저 실행 후 이미지 빌드가 완료되면, `pnpm run dev` 명령어를 실행하여 letyuchan을 이용하시면 됩니다. 이미지 빌드시 다소 시간이 소요될 수 있습니다.',
             ],
             en: [
                 '1. To use the Korean grammar correction service, please install Docker first. For Mac users, it is recommended to run `brew install --cask docker` in the terminal. For Windows users, please download and install Docker Desktop from the official website (https://www.docker.com/get-started/). After the installation is complete, verify that Docker is installed correctly by running the following commands: `docker -v`, `docker run hello-world`.',
-                '2. After forking the project, when running it for the first time, execute `docker compose up --build -d server` to build the image. Once the build is complete, you can run `pnpm run dev` to start Velogit. Note: The image build process may take some time.',
+                '2. After forking the project, when running it for the first time, execute `docker compose up --build -d server` to build the image. Once the build is complete, you can run `pnpm run dev` to start letyuchan. Note: The image build process may take some time.',
             ],
         },
     },
@@ -342,11 +342,11 @@ export const helpGuideMetaDataList = [
         ],
         descriptions: {
             ko: [
-                '1. Open Graph 설정을 위해 velogit/index.html 파일로 들어가 주세요.',
+                '1. Open Graph 설정을 위해 letyuchan/index.html 파일로 들어가 주세요.',
                 '2. https://letyuchan.github.io 가 들어간 부분에서 letyuchan을 여러분의 깃허브 사용자 이름으로 교체해주세요. 나머지 코드는 절대 수정하지 마세요.',
             ],
             en: [
-                '1. To configure Open Graph metadata, open the velogit/index.html file.',
+                '1. To configure Open Graph metadata, open the letyuchan/index.html file.',
                 '2. In any URL containing https://letyuchan.github.io, replace "letyuchan" with your own GitHub username. Do not modify any other parts of the code.',
             ],
         },

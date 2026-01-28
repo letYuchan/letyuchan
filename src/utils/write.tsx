@@ -73,7 +73,7 @@ export const insertMarkdownSyntax = (
         newSelectionStart = before.length + 1;
         newSelectionEnd = newSelectionStart + 4;
     } else if (marker === 'image-md') {
-        const url = prompt('Enter image URL:', '/velogit/images/');
+        const url = prompt('Enter image URL:', '/letyuchan/images/');
         if (url === null) return;
         newValue = before + `![alt text](${url})` + after;
         newSelectionStart = before.length + 2;
@@ -82,7 +82,7 @@ export const insertMarkdownSyntax = (
         const maxImages = 4;
         const urls: string[] = [];
         for (let i = 0; i < maxImages; i++) {
-            const u = prompt(`Enter image URL ${i + 1} (Cancel to stop):`, '/velogit/images/');
+            const u = prompt(`Enter image URL ${i + 1} (Cancel to stop):`, '/letyuchan/images/');
             if (!u) break;
             urls.push(u);
         }
@@ -112,7 +112,7 @@ export const insertMarkdownSyntax = (
         newSelectionStart = before.length + layout.indexOf('alt="image"') + 5;
         newSelectionEnd = newSelectionStart + 5;
     } else if (marker === 'video') {
-        const url = prompt('Enter video URL:', '/velogit/videos/');
+        const url = prompt('Enter video URL:', '/letyuchan/videos/');
         if (url === null) return;
         const html = `<video src="${url}" width="720" height="480" controls></video>`;
         newValue = before + html + after;
@@ -144,7 +144,7 @@ export const insertMarkdownSyntax = (
             const cleanSub = (sub || '').trim().replace(/^\/+|\/+$/g, '');
             const fileName = file.name;
             const encoded = encodeURIComponent(fileName);
-            const base = '/velogit/uploads';
+            const base = '/letyuchan/uploads';
             const filePath = cleanSub ? `${base}/${cleanSub}/${encoded}` : `${base}/${encoded}`;
             const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
             const ext = fileName.split('.').pop()?.toLowerCase();
@@ -392,8 +392,8 @@ const insertAtCursor = (ta: HTMLTextAreaElement, text: string) => {
   ⑩ 파일(file)
     - 파일 선택 input을 열고, 선택 파일 메타(아이콘/크기)로 마크다운 링크 생성
     - 서브폴더 입력 지원: 'test', 'test/more/deep' 등 다단계 가능
-      - 경로: /velogit/uploads/[subpath]/encodedFileName
-    - 예시 마크다운: `[📄 sample.pdf (1.2MB)](/velogit/uploads/docs/sample.pdf)`
+      - 경로: /letyuchan/uploads/[subpath]/encodedFileName
+    - 예시 마크다운: `[📄 sample.pdf (1.2MB)](/letyuchan/uploads/docs/sample.pdf)`
   ⑪ 표(table)
     - prompt로 행/열 수 입력 → GFM 테이블 마크다운 자동 생성
   ⑫ 기본(기타 marker)
@@ -403,7 +403,7 @@ const insertAtCursor = (ta: HTMLTextAreaElement, text: string) => {
   - afterApply 콜백으로 최신 문자열 전달
 - 주의:
   - prompt 기반 UX는 브라우저 환경 전제
-  - 업로드/정적 호스팅 경로(/velogit/uploads/...)는 배포 환경에 맞게 관리 필요
+  - 업로드/정적 호스팅 경로(/letyuchan/uploads/...)는 배포 환경에 맞게 관리 필요
   - 서브폴더는 앞뒤 슬래시 정리(중간 슬래시는 유지)
 
 ────────────────────────────────────────────────────────

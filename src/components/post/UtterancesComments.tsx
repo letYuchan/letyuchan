@@ -23,7 +23,7 @@ const UtterancesComments = () => {
         // KO: CORS 허용 (익명 요청)
 
         // ⬇️ User-customizable settings / ⬇️ 사용자 맞춤 설정 부분
-        scriptEl.setAttribute('repo', 'letYuchan/velogit');
+        scriptEl.setAttribute('repo', 'letYuchan/letyuchan');
         // EN: GitHub repository name where comments will be stored (format: 'username/repository')
         // KO: 댓글이 저장될 GitHub 저장소 이름 (형식: '사용자명/저장소명')
 
@@ -72,7 +72,7 @@ export default UtterancesComments;
  *      - async: true
  *      - crossOrigin: 'anonymous'
  *      - setAttribute:
- *         - repo: 'letYuchan/velogit' → 댓글 저장할 GitHub repo
+ *         - repo: 'letYuchan/letyuchan' → 댓글 저장할 GitHub repo
  *         - issue-term: slug || 'default' → slug 기준으로 issue 매칭
  *         - label: 'comment' → GitHub issue 라벨
  *         - theme: 'github-light' → 댓글 UI 테마

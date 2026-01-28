@@ -25,7 +25,7 @@ const Footer = () => {
             {/* copyright, license */}
             <div className='text-md flex flex-col gap-1'>
                 <p className='text-sm font-bold text-foreground'>
-                    © 2025 velogit — Created&nbsp;
+                    © 2025 letyuchan — Created&nbsp;
                     <a
                         href='https://github.com/letYuchan/'
                         className='text-primary underline decoration-dotted hover:decoration-solid active:decoration-solid'
@@ -36,7 +36,7 @@ const Footer = () => {
                     only&#41;
                 </p>
                 <p className='text-sm font-bold text-foreground'>
-                    velogit v1.0.0 &#40;Beta&#41; — Official release
+                    letyuchan v1.0.0 &#40;Beta&#41; — Official release
                 </p>
                 <p className='text-xs font-semibold text-muted'>
                     Fonts: SUIT and Pretendard are used under the SIL Open Font License.
@@ -107,11 +107,11 @@ const Footer = () => {
             <div className='col: flex flex-col justify-start gap-4 sm:flex-row sm:justify-around'>
                 <a
                     target='_blank'
-                    href='https://github.com/letYuchan/velogit'
+                    href='https://github.com/letYuchan/letyuchan'
                     className='flex flex-col flex-nowrap items-center justify-start'
                 >
                     <FaGithub className='text-2xl text-primary transition-transform ease-in-out hover:scale-110 active:scale-110 sm:text-3xl'></FaGithub>
-                    <p className='text-md font-title text-muted sm:text-xl'>velogit</p>
+                    <p className='text-md font-title text-muted sm:text-xl'>letyuchan</p>
                 </a>
                 <a
                     target='_blank'

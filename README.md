@@ -181,14 +181,14 @@ pnpm run dev
 
 👉 사용자는 글 작성 후 버튼을 누르고 명령어 한 줄 실행으로 `빌드 → 커밋 → 푸시 → 배포`까지 한 번에 진행됩니다.
 
-- 글 삭제는 `velogit/posts`에서 원하는 파일을 삭제하면 됩니다.
+- 글 삭제는 `letyuchan/posts`에서 원하는 파일을 삭제하면 됩니다.
 
 ### 5. 깃허브 페이지 설정
 
 - 최초 글 등록을 한번 해주세요. 등록 시 gh-pages 브렌치가 자동으로 생성 및 배포됩니다.
 - 이후 Settings > Pages에 들어가 아래 사진과 같이 branch를 gh-pages로 페이지를 설정해주세요.
   <img width="1239" height="596" alt="image" src="https://github.com/user-attachments/assets/a065bd1b-6057-4f0f-abc2-ec51f4317264" />
-- 일반적인 주소: https://github-name.github.io/velogit
+- 일반적인 주소: https://github-name.github.io/letyuchan
 
 ### 6. 추후 플랫폼 업데이트
 
@@ -223,7 +223,7 @@ git remote add upstream https://github.com/author/velogit.git
 
 ### 1. 테마 설정
 
-- 경로: `velogit/public/images/system/themes`
+- 경로: `letyuchan/public/images/system/themes`
 - `custom.png`, `custom-header.png` 파일을 원하는 이미지로 교체하세요.
 - **권장사항**:
 
@@ -232,13 +232,13 @@ git remote add upstream https://github.com/author/velogit.git
 
 - 추가 설정 (색상):
 
-    - `velogit/index.css` 에서 `.theme-custom` 과 `.theme-custom.dark` 의 색상 값을 기호에 맞게 수정하면  
+    - `letyuchan/index.css` 에서 `.theme-custom` 과 `.theme-custom.dark` 의 색상 값을 기호에 맞게 수정하면  
       **라이트/다크 모드의 색상 테마**를 자유롭게 변경할 수 있습니다.
 
 - 추가 설정 (기본 테마 지정):
 
     - 기본 진입 시 적용될 테마를 바꾸고 싶다면  
-      `velogit/src/components/common/layout/footer/ThemeSelectorModal.tsx` 에서 아래 코드를 수정하세요.
+      `letyuchan/src/components/common/layout/footer/ThemeSelectorModal.tsx` 에서 아래 코드를 수정하세요.
 
         ```ts
         // before
@@ -256,7 +256,7 @@ git remote add upstream https://github.com/author/velogit.git
 
 ### 2. 블로그 헤더 설명글
 
-- 경로: `velogit/src/data/home.ts`
+- 경로: `letyuchan/src/data/home.ts`
 - 수정할 항목:
     - `profileImgPath` : 프로필 이미지 경로
     - `blogOwnerDesc` : 블로그 소유자 설명
@@ -269,7 +269,7 @@ git remote add upstream https://github.com/author/velogit.git
 
 ### 3. 블로그 배경 음악
 
-- 경로: `velogit/src/assets/audio`
+- 경로: `letyuchan/src/assets/audio`
 - 배경 음악으로 사용할 `mp3` 파일을 추가하세요.
 - 여러 개의 파일을 넣으면 **자동으로 랜덤 재생**됩니다. 🎶
 
@@ -277,7 +277,7 @@ git remote add upstream https://github.com/author/velogit.git
 
 ### 4. About 페이지
 
-- 경로: `velogit/src/pages/AboutPage.tsx`
+- 경로: `letyuchan/src/pages/AboutPage.tsx`
 - **자유롭게 커스터마이징** 가능:
     - 직접 코드를 작성해도 되고
     - 제공된 템플릿의 텍스트만 수정해도 됩니다.
@@ -287,7 +287,7 @@ git remote add upstream https://github.com/author/velogit.git
 
 ### 5. 오픈그래프 설정
 
-- 경로: `velogit/index.html`
+- 경로: `letyuchan/index.html`
 - `letYuchan` 이라고 적힌 부분을 **여러분의 GitHub 계정 아이디**로 바꿔주세요.
 
 ➡️ 블로그 공유 시 썸네일/메타데이터에 반영됩니다.
@@ -504,7 +504,7 @@ pnpm run dev
 
 👉 With one command, you can handle `build → commit → push → deploy`.
 
-- To delete a post, simply remove the desired file from velogit/posts.
+- To delete a post, simply remove the desired file from letyuchan/posts.
 
 ### 5. GitHub Pages Setup
 
@@ -512,7 +512,7 @@ pnpm run dev
   When you do, the gh-pages branch will be automatically created and deployed.
 - Then go to Settings > Pages in your repository and configure it as shown below, by selecting the gh-pages branch as the Pages source.
   <img width="1239" height="596" alt="image" src="https://github.com/user-attachments/assets/a065bd1b-6057-4f0f-abc2-ec51f4317264" />
-- The default site address will be: https://github-username.github.io/velogit
+- The default site address will be: https://github-username.github.io/letyuchan
 
 ### 6. Keeping Updated
 
@@ -543,7 +543,7 @@ Modifying configurations beyond the provided settings and deploying the applicat
 
 ### 1. Theme Setup
 
-- Path: `velogit/public/images/system/themes`
+- Path: `letyuchan/public/images/system/themes`
 - Replace `custom.png` and `custom-header.png` with your own images.
 - **Recommendations**:
 
@@ -551,11 +551,11 @@ Modifying configurations beyond the provided settings and deploying the applicat
     - Keep the center area clean/simple.
 
 - Additional (Colors):  
-  Edit `velogit/index.css` to change `.theme-custom` and `.theme-custom.dark` color values for Light/Dark theme customization.
+  Edit `letyuchan/index.css` to change `.theme-custom` and `.theme-custom.dark` color values for Light/Dark theme customization.
 
 - Additional (Default Theme):  
   To change the initial theme, edit:  
-  `velogit/src/components/common/layout/footer/ThemeSelectorModal.tsx`
+  `letyuchan/src/components/common/layout/footer/ThemeSelectorModal.tsx`
 
     ```ts
     // default
@@ -571,7 +571,7 @@ Modifying configurations beyond the provided settings and deploying the applicat
 
 ### 2. Blog Header Text
 
-- Path: `velogit/src/data/home.ts`
+- Path: `letyuchan/src/data/home.ts`
 - Update these values:
     - `profileImgPath`: profile image path
     - `blogOwnerDesc`: blog owner description
@@ -581,7 +581,7 @@ Modifying configurations beyond the provided settings and deploying the applicat
 
 ### 3. Background Music
 
-- Path: `velogit/src/assets/audio`
+- Path: `letyuchan/src/assets/audio`
 - Add `.mp3` files for background music.
 - Multiple files → **random shuffle playback**. 🎶
 
@@ -589,7 +589,7 @@ Modifying configurations beyond the provided settings and deploying the applicat
 
 ### 4. About Page
 
-- Path: `velogit/src/pages/AboutPage.tsx`
+- Path: `letyuchan/src/pages/AboutPage.tsx`
 - Fully customizable:
     - Write your own code
     - Or just edit template text
@@ -598,7 +598,7 @@ Modifying configurations beyond the provided settings and deploying the applicat
 
 ### 5. Open Graph Metadata
 
-- Path: `velogit/index.html`
+- Path: `letyuchan/index.html`
 - Replace all `letYuchan` strings with your GitHub username.
 
 ➡️ Affects shared preview metadata (thumbnail/title/desc).

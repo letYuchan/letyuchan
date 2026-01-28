@@ -49,7 +49,7 @@ const HomePage = () => {
 
     return (
         <main
-            aria-label='Velogit blog homepage with category and post list'
+            aria-label='letyuchan blog homepage with category and post list'
             className='mb-10 flex w-full flex-col items-center justify-start gap-5'
         >
             <BlogHeader />

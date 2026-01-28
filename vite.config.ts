@@ -5,7 +5,7 @@ import path from 'path';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-    base: '/velogit/',
+    base: '/letyuchan/',
     plugins: [react(), svgr()],
     resolve: {
         alias: {

@@ -127,7 +127,7 @@ const MarkdownRenderer = ({ parsedFrontMatter, content }: MarkdownRendererProps)
                     ),
                     a: ({ node, ...props }) => {
                         const href = props.href ?? '';
-                        const isUploadFile = href.startsWith('/velogit/uploads/');
+                        const isUploadFile = href.startsWith('/letyuchan/uploads/');
 
                         const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
                             if (!isUploadFile) return;
@@ -331,7 +331,7 @@ export default MarkdownRenderer;
  *   - 각 태그별 허용 속성(src/controls/className/style 등)과 '*' 공통 속성(className/data-language/style) 지정
  * - 컴포넌트 오버라이드(components):
  *   - h1~h4, p, ul/ol/li, blockquote, table 계열 등 Tailwind 기반 스타일링
- *   - a: 업로드 경로(/velogit/uploads/...)면 fetch → blob → 다운로드 처리
+ *   - a: 업로드 경로(/letyuchan/uploads/...)면 fetch → blob → 다운로드 처리
  *   - code:
  *     - 인라인/블록 코드 구분
  *     - 블록 코드에 복사 버튼 제공(클립보드로 내용 복사, 1.5초간 "Copied!" 표시)
