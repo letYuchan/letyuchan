@@ -737,8 +737,7 @@ summary: 'Next.js를 이해하고 실무에서 적용가능한 개념 학습하�
 ## Next.js
 
 ### Next.js란
-Next.js: 
-<mark>React를 "브라우저 UI 라이브러리"에서 "서버 중심 웹 어플리케이션 프레임워크"로 확장한 도구</mark>
+Next.js: <mark>React를 "브라우저 UI 라이브러리"에서 "서버 중심 웹 어플리케이션 프레임워크"로 확장한 도구</mark>
 
 기존 React에서 추가 된 기능
 - **서버 실행 환경**
@@ -1104,8 +1103,7 @@ DB, 인증, 외부서비스 접근을 담당한다. 조작이 아닌 **연결**�
 ## Next 실무패턴 딥다이브
 
 ### Middleware
-정의: 
-<mark>페이지 코드가 실행되기 전에 서버가 먼저 한번 보는 검사대</mark>
+정의:  <mark>페이지 코드가 실행되기 전에 서버가 먼저 한번 보는 검사대</mark>
 
 목적: 
 **통과**/**반려**/**리다이렉션**
@@ -1129,8 +1127,7 @@ src/
 \`\`\`
 ---
 ### Server Actions
-정의:
-<mark>Client에서 서버함수를 직접 호출하게 해주는 기능</mark>
+정의: <mark>Client에서 서버함수를 직접 호출하게 해주는 기능</mark>
 
 위치:
 \`\`\`markdown
@@ -1169,15 +1166,7 @@ export async function createProduct(formData: FormData) {
 </form>
 \`\`\`
 
-=> <mark>페이지 전환 없는 상태 변경이나 단순 POST/PUT에서 쓴다.</mark>
-
-
-
-
-
-
-
-`,uL=`---
+=> <mark>페이지 전환 없는 상태 변경이나 단순 POST/PUT에서 쓴다.</mark>`,uL=`---
 title: '렌더링 전략 이해'
 date: '2026-01-29'
 category: 'Dev'
