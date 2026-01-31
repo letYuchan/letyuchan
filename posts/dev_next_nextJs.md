@@ -1,5 +1,5 @@
 ---
-title: 'Next.js 이해하기'
+title: 'Next.js 기초'
 date: '2026-01-29'
 category: 'Dev'
 tags: ['Next.js', 'App Router', 'Server component', 'Client component']
@@ -325,7 +325,8 @@ api/에서는 우리제품에 대한 api뿐만 아니라 외부 api 엔드포인
 
 Server / client 컴포넌트 모두 가능하고 page.tsx는 오케스트레이터로서 이 안에 코드를 조립만 한다.
 
-특히 services 폴더는 server와 client로 쪼개어 <mark>server 내부에서 필요한 서비스 로직은 server에, 사용자의 직접적인 상호작용과 관계되는 부분은 client폴더에 적용</mark>시켜주면 되겠다. clinet폴더는 결국 <mark>기존에 내가 사용하던 api호출 및 query작성 기능만을 담당하는것이 아키텍쳐의 원칙에 부합</mark>할 것이다.
+특히 services 폴더는 server와 client로 쪼개어 <mark>server 내부에서 필요한 서비스 로직은 server에, 사용자의 직접적인 상호작용과 관계되는 부분은 client폴더에 적용</mark>시켜주면 되겠다. 
+clinet폴더는 결국 <mark>기존에 내가 리액트 프로젝트에서 작성했던 api호출 및 query작성 패턴만을 담당하는것이 아키텍쳐의 원칙에 부합</mark>할 것이다.
 
 validator폴더는 **스키마를 정의**하고 **런타임 검증**을 하는 것이다.
 
