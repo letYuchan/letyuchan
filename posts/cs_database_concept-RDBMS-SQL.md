@@ -1,8 +1,8 @@
 ---
-title: '데이터베이스 이해하기'
+title: '데이터베이스 기초'
 date: '2026-01-30'
 category: 'CS'
-tags: ['DB']
+tags: ['DB', 'RDBMS', 'NoSQL', 'SQL']
 summary: '데이터베이스 기본 개념 이해가기'
 ---
 
@@ -11,10 +11,10 @@ summary: '데이터베이스 기본 개념 이해가기'
 ### 용어 정리
 
 Database: 
-구조와 규칙그리고 영속성을 가진 데이터의 집합
+**구조**와 **규칙**그리고 **영속성**을 가진 데이터의 집합
 
 DBMS(DB-Management System):
-DB를 생성·관리·보안·조회하게 해주는 소프트웨어
+DB를 **생성·관리·보안·조회**하게 해주는 소프트웨어
 
 RDBMS:
 관계형 DB를 관리하는 DBMS
@@ -28,19 +28,19 @@ DB에 명령하는 언어
 
 #### 관계형DB
 -  정의: 
-데이터를 표(테이블)로 저장하고 테이블 간 관계를 명시적으로 정의하는 DB
+데이터를 <mark>표(테이블)로 저장하고 테이블 간 관계를 명시적으로 정의</mark>하는 DB
 ```txt
 users
 --------------------------------
 id | email | created_at
 ```
 - 종류: PostgreSQL, MySQL, Oracle, SQLite
-- 특징: 고정된 Schema / Column 타입 강제 / PK, FK 존재 / SQL(Query Lang)
-- 장점: 데이터무결성 / 트랜잭션 강력  / 비즈니스 로직에 강함 / JOIN으로 결합
+- 특징: 고정된 Schema / **Column 타입 강제** / **PK, FK 존재** / **SQL(Query Lang)**
+- 장점: **데이터무결성** / **트랜잭션 강력**  / 비즈니스 로직에 강함 / JOIN으로 결합
 
 #### 비관계형DB(NoSQL)
 - 정의:
-관계를 강제하지 않고 확장성·유연성을 우선한 DB
+<mark>관계를 강제하지 않고 확장성·유연성을 우선</mark>한 DB
 - 종류:
 ```txt
 // Key - Value
@@ -57,8 +57,8 @@ id | email | created_at
 ```
 Cassandra - Column, 대규모 분산
 Neo4j - Graph, 관계 중심
-- 장점: Schema 유연 / 수평 확장 쉬움 / 읽기 빠름
-- 단점: JOIN 없음 / 무결성을 직접 관리 / 트랜잭션 약함
+- 장점: Schema 유연 / 수평 확장 쉬움 / **읽기 빠름**
+- 단점: JOIN 없음 / **무결성을 직접 관리** / **트랜잭션 약함**
 
 #### 표 정리
 | 항목 | 관계형 DB (RDBMS) | 비관계형 DB (NoSQL) |
@@ -72,7 +72,7 @@ Neo4j - Graph, 관계 중심
 | 확장 방식 | 수직 확장 중심 | 수평 확장에 유리 |
 | 주 사용 사례 | 핵심 비즈니스 데이터 | 캐시 / 로그 / 세션 |
 
-=> 관계형은 규칙과 신뢰를, 비관계형은 확장과 유연함을
+=> <mark>관계형은 규칙과 신뢰를, 비관계형은 확장과 유연함을</mark>
 
 ## 관계형 딥다이브
 
@@ -90,16 +90,16 @@ Neo4j - Graph, 관계 중심
 ---
 
 ### Key
-#### Primary Key (PK)
-- 정의: 각 행을 유일하게 식별하는 Column
-- 규칙: Unique(도메인 값 중복 X)와 NOT NULL, 최소성(후보키 중 어느 하나라도 제거하면 유일성을 잃는 성질) 보장
+#### **Primary Key (PK)**
+- 정의: <mark>각 행을 유일하게 식별하는 Column</mark>
+- 규칙: **Unique(**도메인 값 중복 X)와 **NOT NULL**, **최소성**(후보키 중 어느 하나라도 제거하면 유일성을 잃는 성질) 보장
 - 특징: 관계연결과 수정/삭제의 기준점
 - 예시: id, UUID, auto increment number
 
-#### ForeignKey(FK)
-- 정의: 다른 테이블의 PK를 참조하는 키(관계 형성)
-- 규칙: NULL or PK의 도메인
-- 특징: 참조무결성 보장 → 참조키값이orders.user_id=123 이면, users.id=123 이 반드시 존재해야 함
+#### **ForeignKey(FK)**
+- 정의: <mark>다른 테이블의 PK를 참조하는 키(관계 형성)</mark>
+- 규칙: **NULL** or **PK의 도메인**
+- 특징: **참조무결성** 보장 → 참조키값이orders.user_id=123 이면, users.id=123 이 반드시 존재해야 함
 - 예시: orders.user_id → users.id 를 가리킴
 
 #### Candidate Key
@@ -115,34 +115,33 @@ Neo4j - Graph, 관계 중심
 ---
 
 ### 무결성(Integrity)
-목적: 데이터가 망가지지 않게 하는 안전벨트
+목적: <mark>데이터가 망가지지 않게 하는 안전벨트</mark>
 
 #### 무결성 제약조건
-1. 개체 무결성: 각 Record는 고유해야한다 → PK로 보장
-2. 도메인 무결성: 각 Field는 Domain에 지정된 값만 가짐
-3. 참조 무결성: FK가 참조하는 대상은 반드시 존재한다 → NOT NULL or PK의 값
+1. **개체 무결성**: <mark>각 Record는 고유해야한다</mark> → PK로 보장
+2. **도메인 무결성**: <mark>각 Field는 Domain에 지정된 값만 가짐</mark>
+3. **참조 무결성**: <mark>FK가 참조하는 대상은 반드시 존재한다</mark> → NOT NULL or PK의 값
 
-=> DB에서 보장함으로써 최후의 방어선으로서 역할
+=> DB에서 보장함으로써 **최후의 방어선**으로서 역할
 
 ---
 
 ### 트랜잭션(Transaction)
 ![트랜잭션](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWr7781K_uVGJqravrtHozf3o_oyJg9b1XaA&s)
 
-트랜잭션은 여러 쿼리를 하나의 작업처럼 묶어 "전부 성공" or "전부 취소"를 보장하는 작업단위
+트랜잭션은 <mark>여러 쿼리를 하나의 작업처럼 묶어 "전부 성공" or "전부 취소"를 보장하는 작업단위</mark>
 
 ACID를 보장
- - Atomicity: 연산이 정상적으로 수행(Commit) or 어떠한 연산도 수행 X(Rollback)
-- Consistency: 시스템 고정요소가 트랜잭션 수행 전/후 동일
-- Isolation: 개별 트랜잭션은 다른 트랜잭션을의 간섭 및 영향X
-- Durability:
-Commit된 트랜잭션 결과는 영구적으로 기록됨
+ - **Atomicity**: <mark>연산이 정상적으로 수행(Commit) or 어떠한 연산도 수행 X(Rollback)</mark>
+- **Consistency**: <mark>시스템 고정요소가 트랜잭션 수행 전/후 동일</mark>
+- **Isolation**: <mark>개별 트랜잭션은 다른 트랜잭션을의 간섭 및 영향X</mark>
+- **Durability**: <mark>Commit된 트랜잭션 결과는 영구적으로 기록됨</mark>
 
 ---
 
 ### 정규화(Normalization) 
 
-목적: 중복을 줄이고, 수정/삭제/추가할 때 데이터가 망가지지 않게 테이블을 쪼개는 설계 규칙
+목적: <mark>중복을 줄이고, 수정/삭제/추가할 때 데이터가 망가지지 않게 테이블을 쪼개는 설계 규칙</mark>
 
 문제상황
 - 갱신 이상: 어떤곳은 바뀌고 어떤 곳은 그대로
@@ -150,16 +149,16 @@ Commit된 트랜잭션 결과는 영구적으로 기록됨
 - 삭제 이상: 하나 삭제했는데 다른것도 삭제
 
 목표
-- 한 테이블은 하나의 주제만
+- <mark>한 테이블은 하나의 주제만</mark>
 - 반복/리스트 구조는 분리
-- 하나의 PK에 대해 나머지 모든 컬럼 값이 직접 종속 되도록 설계(제 2 정규형)
+- <mark>하나의 PK에 대해 나머지 모든 컬럼 값이 직접 종속 되도록 설계(제 2 정규형)</mark>
 
-=> 중복을 제거하는게 핵심
+=> **중복을 제거**하는게 핵심
 
 정규화 과정
-1. 제 1 정규형: 모든 Domain은 원자 값으로만 정의
-2. 제 2 정규형: 간접 함수 종속이 아닌 완전 함수적 종속을 만족
-3. 기본키가 아닌 키들이 이행적 함수 종속 관계(X → Y, Y → Z면 X → Z) 만족 X
+1. **제 1 정규형**: <mark>모든 Domain은 원자 값으로만 정의</mark>
+2. **제 2 정규형**:<mark> 간접 함수 종속이 아닌 완전 함수적 종속을 만족</mark>
+3. **제 3 정규형**: <mark>기본키가 아닌 키들이 이행적 함수 종속 관계(X → Y, Y → Z면 X → Z) 만족 X</mark>
 
 제 2 정규형 심화
 ```txt
@@ -214,12 +213,12 @@ user_id (FK)
 ---
 
 ### Index
-목적: 검색을 빠르게 하기 위한 정렬된 구조
+목적: **검색을 빠르게** 하기 위한 정렬된 구조
 ```sql
 CREATE INDEX ON users(email);
 ```
 - 장점: 조회 빠름
-- 단점: 쓰기 느려짐, 저장공간 사용
+- 단점: **쓰기 느려짐**, **저장공간 사용**
 
 ## SQL
 
@@ -352,7 +351,6 @@ SELECT *
 FROM products
 WHERE name LIKE '%노트%';
 ```
-노트를 포함하는
 - 존재여부: EXISTS, NOT EXISTS
 ```sql
 -- 주문을 한 번이라도 한 유저
@@ -403,19 +401,3 @@ ROLLBACK TO after_order;
 
 COMMIT;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
