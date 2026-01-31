@@ -34,6 +34,11 @@ PostgreSQL은 **산업용 RDBMS**이다. Supabase가 해당 RDBMS를 사용하�
 ### What&Features
 Supabase란 <mark>PostgreSQL을 중심으로 Auth, API, 보안(RLS)를 한번에 제공하는 BE 플랫폼</mark>
 
+Supabase 기본 Role
+- **anon**: **비로그인** 사용자
+- **autenticated**: **로그인** 사용자
+- **service_role**: **관리자(RSL무시)**
+
 주요 기능표
 | 구성 | 설명 |
 | --- | --- |
@@ -229,8 +234,3 @@ Route.ts는 주로 아래와 같은 상황에서 활용한다.
 1. Read는 서버 컴포넌트에서 Supabase로 직접 한다.
 2. Write는 **Server Actions** or **route.ts**를 통해서 한다.
 3. **단순한 Write**에 한해서 클라이언트 컴포넌트에서 Supabase로 직접 조작한다.
-
-
-
-
-
